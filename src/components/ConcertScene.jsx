@@ -5,7 +5,8 @@ import Dancer from './Dancer'
 import Zombie from './Zombie'
 import Stage from './Stage'
 
-export default function ConcertScene() {
+
+function App() {
   const positions = [
     [-3, 0, -10],
     [3, 0, -10],
@@ -25,12 +26,23 @@ export default function ConcertScene() {
         zIndex: 0,
         width: '100vw',
         height: '100vh',
+        background: '#0a0a0a'
       }}
       gl={{ toneMapping: THREE.ACESFilmicToneMapping }}
     >
-      <fog attach="fog" args={['#111', 20, 500]} />
+      <fog attach="fog" args={['#000', 20, 700]} />
+
       <ambientLight intensity={0.6} />
-      <directionalLight position={[10, 15, 10]} intensity={1.2} castShadow />
+      <directionalLight
+        position={[10, 15, 10]}
+        intensity={1.2}
+        castShadow
+        shadow-mapSize-width={2048}
+        shadow-mapSize-height={2048}
+        shadow-camera-far={100}
+      />
+
+      
 
       <mesh position={[0, -0.3, 0]} receiveShadow>
         <boxGeometry args={[400, 1, 400]} />
@@ -38,6 +50,7 @@ export default function ConcertScene() {
       </mesh>
 
       <OrbitControls />
+
       <Stage position={[-30, 0, -10]} scale={[5, 5, 5]} />
       {positions.map((pos, i) => (
         <Dancer key={i} position={pos} />
@@ -46,3 +59,5 @@ export default function ConcertScene() {
     </Canvas>
   )
 }
+
+export default App

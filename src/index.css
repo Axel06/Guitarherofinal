@@ -1,3 +1,6 @@
+body, html, #root {
+  background-color: #0a0a0a !important;
+}
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
