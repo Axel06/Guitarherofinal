@@ -12,6 +12,8 @@ import Dcthree from './Dcthree'
 import Dcfour from './Dcfour'
 import Dcfive from './Dcfive'
 import Chanteur from './Chanteur'
+import AutoCamera from './AutoCamera'
+
 
 
 function App() {
@@ -38,6 +40,7 @@ function App() {
       }}
       gl={{ toneMapping: THREE.ACESFilmicToneMapping }}
     >
+      <AutoCamera />
       <fog attach="fog" args={['#000', 20, 700]} />
 
       <ambientLight intensity={0.6} />
