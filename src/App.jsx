@@ -3,6 +3,7 @@ import './Track.css'
 import { notesMap } from './notesMap'
 import ConcertScene from './components/ConcertScene'
 
+
 const frets = [
   { key: 'a', color: 'green' },
   { key: 'z', color: 'red' },

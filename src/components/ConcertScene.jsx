@@ -4,6 +4,13 @@ import * as THREE from 'three'
 import Dancer from './Dancer'
 import Zombie from './Zombie'
 import Stage from './Stage'
+import Hiphop from './Hiphop'
+import Rumba from './Rumba'
+import Dcone from './Dcone'
+import Dctwo from './Dctwo'
+import Dcthree from './Dcthree'
+import Dcfour from './Dcfour'
+import Dcfive from './Dcfive'
 
 
 function App() {
@@ -52,10 +59,21 @@ function App() {
       <OrbitControls />
 
       <Stage position={[-30, 0, -10]} scale={[5, 5, 5]} />
-      {positions.map((pos, i) => (
-        <Dancer key={i} position={pos} />
-      ))}
-      <Zombie position={[0, 0, 5]} />
+
+      <Hiphop position={[5, 0, 5]} rotation={[0, 5, 0]} />
+
+      <Rumba position={[16, 0, 5]} rotation={[0, 5, 0]} />
+
+      <Dcone position={[12, 0, 8]} rotation={[0, 5, 0]} />
+
+      <Dctwo position={[1, 0, -16]} rotation={[0, 5, 0]} />
+
+      <Dcthree position={[25, 0, 17]} rotation={[0, 5, 0]} />
+
+      <Dcfour position={[11, 0, -16]} rotation={[0, 5, 0]} />
+
+      <Dcfive position={[18, 0, -8]} rotation={[0, 5, 0]} />
+
     </Canvas>
   )
 }

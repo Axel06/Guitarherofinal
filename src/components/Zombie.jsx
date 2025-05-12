@@ -3,7 +3,7 @@ import { useGLTF, useAnimations } from '@react-three/drei'
 import { useRef, useEffect } from 'react'
 import * as THREE from 'three'
 
-export default function Zombie({ position = [0, 0, 0] }) {
+export default function Zombie({ position = [0, 0, 0], rotation = [0, 0, 0] }) {
   const group = useRef()
   const { scene, animations } = useGLTF('/models/zombie.glb')
   const { actions } = useAnimations(animations, group)

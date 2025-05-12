@@ -2,7 +2,7 @@ import { useGLTF, useAnimations } from '@react-three/drei'
 import { useRef, useEffect } from 'react'
 import * as THREE from 'three'
 
-export default function Dancer({ position = [0, 0, 0] }) {
+export default function Dancer({ position = [0, 0, 0], rotation = [0, 0, 0] }) {
   const group = useRef()
   const { scene, animations } = useGLTF('/models/danceur.glb')
   const { actions } = useAnimations(animations, group)
@@ -31,7 +31,7 @@ export default function Dancer({ position = [0, 0, 0] }) {
   }, [scene])
 
   return (
-    <group ref={group} position={position}>
+    <group ref={group} position={position} rotation={rotation}>
       <primitive object={scene} scale={[5, 5, 5]} />
     </group>
   )
