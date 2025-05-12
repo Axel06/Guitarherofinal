@@ -11,6 +11,7 @@ import Dctwo from './Dctwo'
 import Dcthree from './Dcthree'
 import Dcfour from './Dcfour'
 import Dcfive from './Dcfive'
+import Chanteur from './Chanteur'
 
 
 function App() {
@@ -60,15 +61,17 @@ function App() {
 
       <Stage position={[-30, 0, -10]} scale={[5, 5, 5]} />
 
+      <Chanteur position={[-22, 5, -8]} rotation={[0, 2, 0]} />
+
       <Hiphop position={[5, 0, 5]} rotation={[0, 5, 0]} />
 
-      <Rumba position={[16, 0, 5]} rotation={[0, 5, 0]} />
+      <Rumba position={[26, 0, 2]} rotation={[0, 5, 0]} />
 
       <Dcone position={[12, 0, 8]} rotation={[0, 5, 0]} />
 
       <Dctwo position={[1, 0, -16]} rotation={[0, 5, 0]} />
 
-      <Dcthree position={[25, 0, 17]} rotation={[0, 5, 0]} />
+      <Dcthree position={[25, 0, -24]} rotation={[0, 5, 0]} />
 
       <Dcfour position={[11, 0, -16]} rotation={[0, 5, 0]} />
 
